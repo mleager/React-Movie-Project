@@ -38,7 +38,9 @@ variant: javascript
 `$ npm install`
 
 
-### Setup for VM
+### Setup for VM (Optional)
+
+I'm working on a Linux VM running on Windows so below is for that scenario:
 
 To access Vite server on VM from Windows, must configure `vite.config.js`
 ```
@@ -68,18 +70,23 @@ To access Vite server from Windows:
 
 .env file will hold the API Key or Token to access the API
 
+Use `VITE_` prefix to be recognized by Vite
+
+
+```
+VITE_API_KEY=
+VITE_API_TOKEN=
+```
 You only need either the Key or Token, not both
 
     - Token is recommended, give to Request Header
     - Key can be used, supplied via URL
     - usage in `./src/services/api.js`
 
-```
-API_KEY=
-API_TOKEN=
-```
 
-* Add it to .gitignore so it's not pushed to your repo
+**NOTE:** 
+
+    Add it to .gitignore so it's not pushed to your repo
 
 
 ## Movie Card Component
